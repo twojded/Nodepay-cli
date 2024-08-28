@@ -1,56 +1,57 @@
-# Kurulum Talimatları
+# Инструкция по установке
 
-1. Güncelleme:
+1. Обновите систему:
 
     ```bash
     sudo apt update && sudo apt upgrade -y
     ```
 
-2. `curl` paketini yükleyin:
+2. Установите пакет curl:
 
     ```bash
     sudo apt install curl -y
     ```
 
-3. `nodepay_setup.sh` scriptini indirin:
+3. Загрузите скрипт nodepay_setup.sh:
 
     ```bash
-    curl -O https://gist.githubusercontent.com/Bo0tstrap/479627be43db165b4016291ff76ea2f1/raw/eed5ade7f5aee685db1fd50ddbe60c324e209cf8/nodepay_setup.sh
+    curl -O https://gist.githubusercontent.com/twojded/ee529c048afaf68cd4fdadb54e97b54f/raw/b2640b1ed7d8d065bbc00339e45b96461c6ab4b4/nodepay_setup.sh
+
     ```
 
-4. İndirilen script'e çalıştırma izni verin:
+4. Дайте загруженному скрипту права на выполнение:
 
     ```bash
     chmod +x nodepay_setup.sh
     ```
 
-5. Yeni bir `screen` başlatın:
+5. Запустите новую сессию screen:
 
     ```bash
     screen -S nodepay
     ```
 
-6. Scripti çalıştırın:
+6. Запустите скрипт:
 
     ```bash
     ./nodepay_setup.sh
     ```
-7. Gerekli izni verin:
+7. Дайте необходимые права на выполнение:
 
     ```bash
     chmod +X Nodepay-cli/nodepay.py
     ```
 
-8. Scripti çalıştırın:
+8. Запустите скрипт:
 
     ```bash
     python3 Nodepay-cli/nodepay.py
     ```
 
-Son komutta sizden np token isteyecek, nodepay dashboard a girip F12 yapıp şu kırmızı ile işaretlediğim yerden alın (np token limiti 14 gün maalesef yani 14 günde bir yenilemeniz gerekiyor)
+В последней команде от вас потребуется ввести np token. Для этого войдите на Nodepay Dashboard, откройте инструменты разработчика (нажмите F12) и получите токен, как показано на скриншоте (np token действует 14 дней, поэтому его нужно обновлять каждые 14 дней).
     ![np](https://github.com/user-attachments/assets/731dd642-46f2-41f4-9de5-60df7e34a1bf)
 
-9. Token değiştirmek için içinde ki kodu silip yenisini yapıştırın CTRL+X Y yapıp kaydedin:
+9. Чтобы изменить токен, удалите старый и вставьте новый, затем сохраните файл с помощью CTRL+X, Y:
     
     ```bash
     cd Nodepay-cli && nano token.txt
