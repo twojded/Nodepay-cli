@@ -36,13 +36,15 @@
     ```bash
     ./nodepay_setup.sh
     ```
-7. Дайте необходимые права на выполнение:
+7. Загрузите данные от всех аккаунтов в файл accounts.txt в формате email:password, токены в файл token.txt (один токен = одна строка), а прокси в файл proxies.txt в формате http://user:pass@ip:port
+ 
+8. Дайте необходимые права на выполнение:
 
     ```bash
     chmod +X Nodepay-cli/nodepay.py
     ```
 
-8. Запустите скрипт:
+9. Запустите скрипт:
 
     ```bash
     python3 Nodepay-cli/nodepay.py
